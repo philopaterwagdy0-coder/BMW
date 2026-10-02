@@ -1,0 +1,167 @@
+export const vehicles = {
+  m3: {
+    id: "m3",
+    name: "BMW M3 Competition Sedan",
+    exactModel: "BMW M3 Competition Sedan with M xDrive",
+    shortName: "M3 Competition",
+    heroLabel: "THE M SERIES",
+    tagline: "Precision in every line.",
+    generation: "G80",
+    description:
+      "A four-door M car with race-bred response, all-weather traction, and the composure of a high-performance sedan.",
+    image: {
+      src: "assets/cars/m3/bmw-m3-competition-sedan-xdrive-rear.webp",
+      alt: "BMW M3 Competition Sedan with M xDrive rear three-quarter view",
+      caption: "BMW M3 Competition Sedan with M xDrive.",
+      source: "BMW PressClub photo P90416669, M3 Competition Sedan with M xDrive.",
+    },
+    powerShort: "510 HP",
+    accelerationShort: "3.5 SEC",
+    specs: [
+      { label: "Power", value: "510 HP", detail: "M TwinPower Turbo inline-six." },
+      { label: "Torque", value: "650 NM", detail: "Broad pull through the midrange." },
+      { label: "0-100 KM/H", value: "3.5 SEC", detail: "M xDrive launch traction." },
+      { label: "Top Speed", value: "250 / 290 KM/H", detail: "Limited / M Driver's Package." },
+      { label: "Drivetrain", value: "M xDRIVE", detail: "All-wheel drive with rear-biased M tuning." },
+    ],
+    drivetrain: "M xDrive",
+    colors: [{ name: "Skyscraper Grey", hex: "#7f8385", image: "assets/cars/m3/bmw-m3-competition-sedan-xdrive-rear.webp" }],
+    story: [
+      {
+        id: "front",
+        kicker: "Sedan precision",
+        title: "Four doors. Full M intent.",
+        text: "The M3 Competition turns everyday usability into a focused performance language.",
+      },
+      {
+        id: "profile",
+        kicker: "Road command",
+        title: "A wide stance with instant authority.",
+        text: "Muscular proportions, M aero, and quad exhausts keep the sedan unmistakably performance-led.",
+      },
+      {
+        id: "detail",
+        kicker: "Driven harder",
+        title: "Grip and control meet clean aggression.",
+        text: "M xDrive gives the Competition Sedan the confidence to deploy its power with precision.",
+      },
+    ],
+    hotspots: [
+      { label: "M xDrive", title: "Rear-biased traction", description: "The M3 Competition Sedan with M xDrive sends power through an M-tuned all-wheel-drive system built for composure and exit speed." },
+      { label: "Quad Exhaust", title: "A signature M exit", description: "Four exhaust outlets and a dark rear diffuser underline the sedan's competition-focused character." },
+      { label: "M Compound Brakes", title: "Confidence under pressure", description: "M Compound braking hardware supports repeated hard stops with a sharp pedal feel." },
+      { label: "Carbon Details", title: "Weight where it matters", description: "Carbon-focused elements sharpen the visual stance while supporting the M3's performance intent." },
+    ],
+  },
+  m4: {
+    id: "m4",
+    name: "BMW M4 Competition Coupe",
+    exactModel: "BMW M4 Competition Coupe",
+    shortName: "M4 Competition",
+    heroLabel: "THE M SERIES",
+    tagline: "Built for the driven.",
+    generation: "G82",
+    description:
+      "A focused two-door M machine shaped around response, balance, and a coupe silhouette that feels made for speed.",
+    image: {
+      src: "assets/cars/m4/bmw-m4-competition-coupe-marina-bay-blue-exterior.webp",
+      alt: "BMW M4 Competition Coupe in Marina Bay Blue exterior view",
+      caption: "BMW M4 Competition Coupe in Marina Bay Blue.",
+      source: "BMW USA image labeled M4 Competition Coupe in Marina Bay Blue Exterior View.",
+    },
+    powerShort: "510 HP",
+    accelerationShort: "3.9 SEC",
+    specs: [
+      { label: "Power", value: "510 HP", detail: "High-revving M TwinPower Turbo inline-six." },
+      { label: "Torque", value: "650 NM", detail: "Immediate response across the power band." },
+      { label: "0-100 KM/H", value: "3.9 SEC", detail: "Competition Coupe acceleration." },
+      { label: "Top Speed", value: "250 / 290 KM/H", detail: "Limited / M Driver's Package." },
+      { label: "Drivetrain", value: "RWD", detail: "Rear-wheel drive competition setup." },
+    ],
+    drivetrain: "Rear-wheel drive",
+    colors: [{ name: "Marina Bay Blue", hex: "#115bdb", image: "assets/cars/m4/bmw-m4-competition-coupe-marina-bay-blue-exterior.webp" }],
+    story: [
+      {
+        id: "front",
+        kicker: "Coupe focus",
+        title: "The face of M precision.",
+        text: "A sharp front signature, wide stance, and coupe proportions make the M4 the visual anchor of the showroom.",
+      },
+      {
+        id: "profile",
+        kicker: "Side profile",
+        title: "Long hood. Low roof. Rear-drive attitude.",
+        text: "The G82 shape is presented like a product film: clean, dramatic, and built around motion.",
+      },
+      {
+        id: "detail",
+        kicker: "Detail focus",
+        title: "Every surface is tuned for intent.",
+        text: "M details, forged wheels, and aerodynamic cues keep the coupe visually connected to performance.",
+      },
+    ],
+    hotspots: [
+      { label: "Adaptive LED Headlights", title: "Precision lighting", description: "Vertical light graphics and a sharp front signature give the M4 Competition Coupe an unmistakable presence." },
+      { label: "M Forged Wheels", title: "Staggered M setup", description: "A 19-inch front and 20-inch rear setup adds stance, control, and road focus." },
+      { label: "M Compound Brakes", title: "Track-focused stopping power", description: "M Compound brakes support repeated high-speed braking with confident feedback." },
+      { label: "Carbon Fiber Roof", title: "Lower center of gravity", description: "The carbon-fiber roof contributes to the coupe's lightweight performance character." },
+    ],
+  },
+  m5: {
+    id: "m5",
+    name: "BMW M5 Competition",
+    exactModel: "BMW M5 Competition",
+    shortName: "M5 Competition",
+    heroLabel: "THE M SERIES",
+    tagline: "Engineered to thrill.",
+    generation: "F90",
+    description:
+      "A super-sedan built around V8 force, long-distance composure, and the kind of acceleration that compresses every straight.",
+    image: {
+      src: "assets/cars/m5/bmw-m5-competition-f90-rear.webp",
+      alt: "BMW M5 Competition rear view",
+      caption: "BMW M5 Competition.",
+      source: "BMW PressClub photo P90391332, BMW M5 Competition.",
+    },
+    powerShort: "625 HP",
+    accelerationShort: "3.3 SEC",
+    specs: [
+      { label: "Power", value: "625 HP", detail: "4.4-liter M TwinPower Turbo V8." },
+      { label: "Torque", value: "750 NM", detail: "Competition-tuned V8 thrust." },
+      { label: "0-100 KM/H", value: "3.3 SEC", detail: "Launch force from M xDrive." },
+      { label: "Top Speed", value: "250 / 305 KM/H", detail: "Limited / M Driver's Package." },
+      { label: "Drivetrain", value: "M xDRIVE", detail: "All-wheel drive performance system." },
+    ],
+    drivetrain: "M xDrive",
+    colors: [{ name: "Motorsport Red", hex: "#d30b21", image: "assets/cars/m5/bmw-m5-competition-f90-rear.webp" }],
+    story: [
+      {
+        id: "front",
+        kicker: "Super sedan",
+        title: "Executive shape. M intensity.",
+        text: "The M5 Competition brings grand touring presence and motorsport urgency into one silhouette.",
+      },
+      {
+        id: "profile",
+        kicker: "V8 force",
+        title: "Power delivered with authority.",
+        text: "Its Competition-tuned V8 and M xDrive system make acceleration feel calm, relentless, and immediate.",
+      },
+      {
+        id: "detail",
+        kicker: "Road control",
+        title: "Composed at speed.",
+        text: "Wide tracks, quad exhausts, and M-specific chassis tuning keep the sedan planted under pressure.",
+      },
+    ],
+    hotspots: [
+      { label: "M TwinPower Turbo V8", title: "V8 pressure", description: "The M5 Competition's 4.4-liter V8 delivers the force and response that define the super-sedan category." },
+      { label: "M xDrive", title: "Traction with intent", description: "M xDrive channels the V8 output with rear-biased confidence and all-weather authority." },
+      { label: "Competition Chassis", title: "Sharper control", description: "Competition tuning gives the M5 a firmer, more focused character without losing long-distance composure." },
+      { label: "Quad Exhaust", title: "The final signature", description: "Four exhaust outlets and an M rear diffuser give the Competition model its visual punctuation." },
+    ],
+  },
+};
+
+export const vehicleList = [vehicles.m3, vehicles.m4, vehicles.m5];
+export const primaryVehicle = vehicles.m4;

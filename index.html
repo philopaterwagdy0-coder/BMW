@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A premium interactive BMW M Series showroom concept for M3, M4, and M5 Competition models." />
+  <title>BMW M Series | Interactive Portfolio Showroom</title>
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2305070b'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23f8fbff' stroke-width='4'/%3E%3Cpath d='M32 10a22 22 0 0 1 22 22H32z' fill='%230b63ce'/%3E%3Cpath d='M10 32a22 22 0 0 1 22-22v22z' fill='%23f8fbff'/%3E%3Cpath d='M32 32h22a22 22 0 0 1-22 22z' fill='%23f8fbff'/%3E%3Cpath d='M10 32h22v22a22 22 0 0 1-22-22z' fill='%230b63ce'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#performance">Skip to specifications</a>
+  <div class="scroll-progress" data-scroll-progress></div>
+  <div class="custom-cursor" data-cursor aria-hidden="true"></div>
+
+  <div class="loading-screen" data-loading-screen aria-live="polite">
+    <div>
+      <span>BMW M</span>
+      <strong>Loading Experience</strong>
+      <p data-loading-value>0%</p>
+    </div>
+  </div>
+
+  <section class="intro-sequence" data-intro aria-label="Cinematic intro">
+    <div class="intro-copy">
+      <span>BMW M</span>
+      <strong data-vehicle-field="heroLabel">THE M SERIES</strong>
+      <p data-vehicle-field="name">BMW M4 Competition Coupe</p>
+    </div>
+    <button class="intro-skip" type="button" data-skip-intro>Skip Intro</button>
+  </section>
+
+  <div class="scene-layer" aria-label="Interactive BMW M Series cinematic stage">
+    <canvas id="bmw-canvas"></canvas>
+  </div>
+  <div class="scene-shade"></div>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="#home" aria-label="BMW M Showroom home">
+      <span class="brand-badge">BMW</span>
+      <span class="brand-text">M Showroom Egypt</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#home">BMW</a>
+      <a href="#models">Models</a>
+      <a href="#performance">Performance</a>
+      <a href="#design">Design</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="header-action" data-vehicle-whatsapp="test-drive" href="https://wa.me/201001234567?text=I%20want%20to%20book%20a%20BMW%20M4%20Competition%20Coupe%20test%20drive" target="_blank" rel="noopener">
+      Book Test Drive
+    </a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">Pure performance</p>
+        <p class="hero-kicker" data-vehicle-field="heroLabel">THE M SERIES</p>
+        <h1 data-vehicle-field="name">BMW M4 Competition Coupe</h1>
+        <p class="hero-copy" data-vehicle-field="tagline">Built for the driven.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#models">Explore Model</a>
+          <a class="btn btn-secondary" href="#performance">View Performance</a>
+        </div>
+
+        <div class="hero-specs" aria-label="Primary vehicle highlights">
+          <div>
+            <strong data-vehicle-field="powerShort">510 HP</strong>
+            <span>Power</span>
+          </div>
+          <div>
+            <strong data-vehicle-field="accelerationShort">3.9 SEC</strong>
+            <span>0-100 KM/H</span>
+          </div>
+          <div>
+            <strong data-vehicle-field="generation">G82</strong>
+            <span>Generation</span>
+          </div>
+        </div>
+      </div>
+
+      <figure class="hero-vehicle" aria-hidden="true">
+        <img data-hero-image src="assets/cars/m4/bmw-m4-competition-coupe-marina-bay-blue-exterior.webp" alt="" />
+      </figure>
+    </section>
+
+    <section class="performance section-pad" id="performance" aria-labelledby="performance-title">
+      <div class="section-heading">
+        <p class="eyebrow">Pure performance</p>
+        <h2 id="performance-title">Engineered to turn every road into a circuit.</h2>
+      </div>
+
+      <div class="spec-grid" data-spec-grid></div>
+    </section>
+
+    <section class="design section-pad" id="design" aria-labelledby="design-title">
+      <div class="section-heading">
+        <p class="eyebrow">Feature hotspots</p>
+        <h2 id="design-title">Precision in every line.</h2>
+        <p data-vehicle-field="description">A focused M car shaped around response, control, and unmistakable presence.</p>
+      </div>
+
+      <div class="hotspot-layout">
+        <div class="hotspot-buttons" data-hotspot-list aria-label="Selected BMW M feature hotspots"></div>
+        <article class="hotspot-panel" data-hotspot-panel>
+          <span>Selected feature</span>
+          <h3>Adaptive LED Headlights</h3>
+          <p>Choose a detail to explore the selected BMW M model.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="detail-showcase section-pad" aria-labelledby="detail-title">
+      <div class="detail-copy reveal">
+        <p class="eyebrow">Wheel / detail showcase</p>
+        <h2 id="detail-title">Lighter. Stronger. Faster.</h2>
+        <p>Forged wheels, M braking hardware, and sculpted aero cues turn every angle into a performance statement.</p>
+      </div>
+      <div class="detail-labels" data-detail-list aria-label="Selected BMW M exterior detail labels">
+        <span>M forged wheels</span>
+        <span>M compound brakes</span>
+        <span>Carbon roof</span>
+        <span>Adaptive LED headlights</span>
+      </div>
+    </section>
+
+    <section class="configurator section-pad" aria-labelledby="configurator-title">
+      <div class="section-heading">
+        <p class="eyebrow">Make it yours</p>
+        <h2 id="configurator-title">A finish with presence.</h2>
+        <p>The selected finish follows the active M model with a controlled, premium transition.</p>
+      </div>
+
+      <div class="color-row" data-color-list aria-label="Verified color choices"></div>
+    </section>
+
+    <section class="model-selector section-pad" id="models" aria-labelledby="model-selector-title">
+      <div class="section-heading">
+        <p class="eyebrow">M model selector</p>
+        <h2 id="model-selector-title">Choose your competition line.</h2>
+        <p>Move between three distinct M personalities with a smooth image and specification transition.</p>
+      </div>
+
+      <div class="selector-layout">
+        <div class="selector-card" aria-label="BMW M model selector" data-model-selector></div>
+
+        <figure class="verified-image">
+          <img data-vehicle-image src="assets/cars/m4/bmw-m4-competition-coupe-marina-bay-blue-exterior.webp" alt="BMW M4 Competition Coupe in Marina Bay Blue exterior view" />
+          <figcaption>
+            <span>Selected model</span>
+            <strong data-vehicle-field="imageCaption">BMW M4 Competition Coupe in Marina Bay Blue.</strong>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="contact section-pad" id="contact">
+      <div class="contact-panel">
+        <div>
+          <p class="eyebrow">Contact / Location</p>
+          <h2>Book your BMW M experience in Egypt.</h2>
+          <p>Arrange a premium showroom visit in Cairo or Giza and discover the selected M model up close.</p>
+        </div>
+
+        <div class="location-list">
+          <div class="location-item">
+            <span>Cairo</span>
+            <strong>New Cairo - 90th Street</strong>
+          </div>
+          <div class="location-item">
+            <span>Giza</span>
+            <strong>Sheikh Zayed - 26 July Corridor</strong>
+          </div>
+        </div>
+
+        <a class="btn btn-primary contact-cta" data-vehicle-whatsapp="contact" href="https://wa.me/201001234567?text=I%20want%20to%20contact%20BMW%20M%20Showroom%20Egypt%20about%20the%20M4%20Competition%20Coupe" target="_blank" rel="noopener">
+          Contact on WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <section class="final-cta section-pad" aria-labelledby="final-title">
+      <div class="final-inner reveal">
+        <p class="eyebrow">Built to be driven</p>
+        <h2 id="final-title" data-vehicle-field="name">BMW M4 Competition Coupe</h2>
+        <div class="hero-actions">
+          <a class="btn btn-primary" data-vehicle-whatsapp="test-drive" href="https://wa.me/201001234567?text=I%20want%20to%20book%20a%20BMW%20M4%20Competition%20Coupe%20test%20drive" target="_blank" rel="noopener">Book A Test Drive</a>
+          <a class="btn btn-secondary" href="#performance">View Performance</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>BMW M Showroom Egypt</span>
+    <span>Interactive M Series portfolio experience.</span>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
